@@ -46,7 +46,7 @@ fun ServiceScreen(
         modifier = Modifier
             .fillMaxSize()
             .background(Color.DarkGray)
-            .verticalScroll(rememberScrollState()),
+            .verticalScroll(rememberScrollState())
     ){
         Column(
             modifier = Modifier.fillMaxWidth()

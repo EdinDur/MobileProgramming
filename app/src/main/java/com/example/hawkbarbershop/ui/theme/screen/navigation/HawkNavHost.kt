@@ -10,6 +10,8 @@ import com.example.hawkbarbershop.LoginDestination
 import com.example.hawkbarbershop.LoginScreen
 import com.example.hawkbarbershop.MyAccountDestination
 import com.example.hawkbarbershop.MyAccountScreen
+import com.example.hawkbarbershop.NotificationDestination
+import com.example.hawkbarbershop.NotificationScreen
 import com.example.hawkbarbershop.RegistrationDestination
 import com.example.hawkbarbershop.RegistrationScreen
 import com.example.hawkbarbershop.ServiceScreen
@@ -67,6 +69,9 @@ fun HawkNavHost(navController: NavHostController) {
         }
         composable(route = MyAccountDestination.route){
             MyAccountScreen()
+        }
+        composable(route = NotificationDestination.route){
+            NotificationScreen()
         }
     }
 }

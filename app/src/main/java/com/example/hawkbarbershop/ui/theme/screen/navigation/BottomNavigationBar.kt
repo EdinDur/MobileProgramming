@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Face
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.MailOutline
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Icon
@@ -26,6 +27,7 @@ fun BottomNavigationBar(navController: NavController) {
     val items = listOf(
         "home" to Icons.Filled.Home,
         "services" to Icons.Filled.Face,
+        "notifications" to Icons.Filled.MailOutline,
         "settings" to Icons.Filled.Settings
     )
 
@@ -50,7 +52,7 @@ fun BottomNavigationBar(navController: NavController) {
                         navController.navigate(route) {
                             navController.graph.startDestinationRoute?.let { startRoute ->
                                 popUpTo(startRoute) {
-                                    saveState = true
+                                    saveState = false
                                 }
                             }
                             launchSingleTop = true
@@ -62,8 +64,6 @@ fun BottomNavigationBar(navController: NavController) {
         }
     }
 }
-
-
 @Composable
 fun RowScope.BottomNavigationItem(
     route: String,
